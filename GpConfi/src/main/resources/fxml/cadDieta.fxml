@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="painel" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ainur.controller.CadDietaController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Button contentDisplay="GRAPHIC_ONLY" layoutX="17.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleAdd" text="Button" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <TextField fx:id="txtBusca" layoutX="246.0" layoutY="37.0" prefHeight="25.0" prefWidth="241.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="5.0" />
+      <Button fx:id="btnBuscar" layoutX="529.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleBusca" text="Buscar" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <TableView fx:id="tableView" layoutX="5.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="colCod" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Cod." />
+            <TableColumn fx:id="colAtiva" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Ativa" />
+          <TableColumn fx:id="colDescricao" prefWidth="413.0" text="Descrição" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ComboBox fx:id="cmbBusca" layoutX="141.0" layoutY="5.0" prefHeight="25.0" prefWidth="140.0" AnchorPane.rightAnchor="310.0" AnchorPane.topAnchor="5.0" />
+   </children>
+</AnchorPane>
